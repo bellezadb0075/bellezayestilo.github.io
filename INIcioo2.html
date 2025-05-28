@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estilo y Belleza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f4f9;
+            color: #333;
+        }
+        header, footer {
+            background-color: #e91e63;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #f06292;
+            text-align: center;
+            padding: 10px;
+        }
+        button.nav-btn {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button.nav-btn:hover {
+            background-color: #d81b60;
+        }
+        section {
+            display: none;
+            padding: 2rem;
+            margin: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .active {
+            display: block;
+        }
+        form {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #ffe4f2;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="submit"] {
+            background-color: #c564ef;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #701483;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gallery img {
+            max-width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- FORMULARIO DE INGRESO (solo interfaz, sin enviar datos) -->
+<div id="formulario">
+    <form id="registroForm">
+        <h2 style="text-align:center; color:#e91e63;">Registro</h2>
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono" required>
+        <label>Gmail:</label>
+        <input type="email" name="gmail" required>
+        <label>Sexo:</label>
+        <select name="sexo" required>
+            <option value="">Seleccione</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="Binario">Binario</option>
+            <option value="No me identifico">No me identifico</option>
+        </select>
+        <input type="submit" value="Ingresar">
+    </form>
+</div>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div id="contenido" style="display:none;">
+    <header>
+        <h1>Bienvenida a Estilo y Belleza</h1>
+        <p>Descubre tu mejor versión</p>
+    </header>
+
+    <nav>
+        <button class="nav-btn" onclick="mostrar('inicio')">Inicio</button>
+        <button class="nav-btn" onclick="mostrar('tendencias')">Tendencias</button>
+        <button class="nav-btn" onclick="mostrar('looks')">Looks</button>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <h2>Últimas Tendencias en Moda</h2>
+        <p>Colores vibrantes y patrones audaces están en el centro de atención.</p>
+        <video width="640" height="480" controls>
+            <source src="livie345.mp4" type="video/mp4">
+        </video>
+
+        <h2>Estilo de Vida Saludable</h2>
+        <p>Incluye meditación, yoga y actividades al aire libre.</p>
+
+        <h2>Galería de Inspiración</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Tendencia 1">
+            <img src="image2.jpg" alt="Tendencia 2">
+            <img src="image3.jpg" alt="Tendencia 3">
+            <img src="image4.jpg" alt="Tendencia 4">
+            <img src="image5.jpg" alt="Tendencia 5">
+        </div>
+
+        <h2>Consejos de Estilo</h2>
+        <p>Elige prendas que te hagan sentir segura. La confianza es clave.</p>
+    </section>
+
+    <!-- TENDENCIAS -->
+    <section id="tendencias">
+        <h2>Tendencias de Maquillaje</h2>
+        <div class="trend">
+            <h3>Maquillaje Natural y Glowy</h3>
+            <img src="glow.jpg" class="image">
+            <p>Resalta la belleza natural con un acabado luminoso.</p>
+        </div>
+        <div class="trend">
+            <h3>Colores Vibrantes</h3>
+            <img src="color.JPG" class="image">
+            <img src="vibrante.JPG" class="image">
+            <p>Labios y ojos con tonos vivos y creativos.</p>
+        </div>
+
+        <h2>Tendencias de Outfits</h2>
+        <div class="trend">
+            <h3>Moda Sostenible</h3>
+            <img src="sustentable.JPG" class="image">
+            <img src="vesti.JPG" class="image">
+        </div>
+        <div class="trend">
+            <h3>Estilo Athleisure</h3>
+            <img src="fofo.JPG" class="image">
+            <img src="haha.JPG" class="image">
+        </div>
+
+        <h2>Tratamientos Faciales</h2>
+        <div class="trend">
+            <h3>Hidratación Profunda</h3>
+            <img src="trata.JPG" class="image">
+        </div>
+        <div class="trend">
+            <h3>Faciales Personalizados</h3>
+            <img src="mascarilla.JPG" class="image">
+        </div>
+    </section>
+
+    <!-- LOOKS -->
+    <section id="looks">
+        <h2>Consejos de Belleza</h2>
+        <ul>
+            <li><strong>Hidratación:</strong> Bebe suficiente agua.</li>
+            <li><strong>Protección Solar:</strong> Usa protector todos los días.</li>
+            <li><strong>Rutina de Cuidado:</strong> Limpieza, tonificación e hidratación.</li>
+        </ul>
+
+        <h2>Maquillaje</h2>
+        <ul>
+            <li><strong>Base:</strong> Que se adapte a tu tono.</li>
+            <li><strong>Ojos:</strong> Usa sombras que complementen.</li>
+            <li><strong>Labios:</strong> Colores audaces.</li>
+        </ul>
+
+        <h2>Outfits para Cada Ocasión</h2>
+        <ul>
+            <li><strong>Casual:</strong> Jeans y camiseta.</li>
+            <li><strong>Formal:</strong> Vestido negro o traje.</li>
+            <li><strong>De noche:</strong> Vestido brillante.</li>
+        </ul>
+
+        <h2>Galería de Looks</h2>
+        <div class="gallery">
+            <img src="tip.JPG">
+            <img src="tendecia.JPG">
+            <img src="saludable.JPG">
+            <img src="oufit.JPG">
+            <img src="idia.JPG">
+        </div>
+
+        <h2>Estilo de Vida Saludable</h2>
+        <ul>
+            <li><strong>Comer bien:</strong> Frutas, verduras y proteínas.</li>
+            <li><strong>Ejercicio:</strong> Elige lo que disfrutes.</li>
+            <li><strong>Descanso:</strong> Dormir bien.</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy;2025 Estilo y Belleza. Todos los derechos reservados.
+    </footer>
+</div>
+
+<script>
+    document.getElementById('registroForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // evitar que el formulario se envíe
+        alert("¡Gracias por registrarte! Ahora puedes explorar el sitio.");
+        document.getElementById('formulario').style.display = 'none';
+        document.getElementById('contenido').style.display = 'block';
+        mostrar('inicio'); // mostrar sección de inicio por defecto
+    });
+
+    function mostrar(seccion) {
+        const secciones = ['inicio', 'tendencias', 'looks'];
+        secciones.forEach(id => {
+            document.getElementById(id).classList.remove('active');
+        });
+        document.getElementById(seccion).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
